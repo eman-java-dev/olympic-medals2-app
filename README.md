@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # OlympicGamesStarter
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.3.
@@ -27,3 +28,7 @@ Once mastered, you should continue by creating the typescript interfaces inside 
 You're now ready to implement the requested features.
 
 Good luck!
+=======
+# olympic-medals2-app
+Angular app for visualizing Olympic medals data
+>>>>>>> ceba03f5753f962e50bd7442f01db9c04077e50c
