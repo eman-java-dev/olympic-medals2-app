@@ -67,7 +67,7 @@ src/
 
 ##  Sources & Credits
 
-- Mock data adapted from the **Studi** platform  
+- Mock data adapted from the OpenClassrooms platform  
 - Flag icons provided by [flagcdn.com](https://flagcdn.com)  
 - Built with  using [Angular](https://angular.io)
 - Charts powered by [ngx-charts](https://swimlane.github.io/ngx-charts/)
