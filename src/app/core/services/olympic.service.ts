@@ -1,6 +1,7 @@
+import { Olympic } from '../models/Olympic';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, EMPTY } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 
 @Injectable({
@@ -8,24 +9,32 @@ import { catchError, tap } from 'rxjs/operators';
 })
 export class OlympicService {
   private olympicUrl = './assets/mock/olympic.json';
-  private olympics$ = new BehaviorSubject<any>(undefined);
+
+  private olympics$ = new BehaviorSubject<Olympic[] | null | undefined>(undefined);
+  private hasError$ = new BehaviorSubject<boolean>(false); // ✅ حالة الخطأ
 
   constructor(private http: HttpClient) {}
 
   loadInitialData() {
-    return this.http.get<any>(this.olympicUrl).pipe(
-      tap((value) => this.olympics$.next(value)),
-      catchError((error, caught) => {
-        // TODO: improve error handling
-        console.error(error);
-        // can be useful to end loading state and let the user know something went wrong
-        this.olympics$.next(null);
-        return caught;
+    return this.http.get<Olympic[]>(this.olympicUrl).pipe(
+      tap((data) => {
+        this.olympics$.next(data);
+        this.hasError$.next(false); // تم التحميل بنجاح
+      }),
+      catchError((error) => {
+        console.error('❌ Failed to load Olympics data:', error);
+        this.olympics$.next(null); // إبلاغ باقي المشروع بعدم توفر البيانات
+        this.hasError$.next(true); // تم حدوث خطأ
+        return EMPTY;
       })
     );
   }
 
   getOlympics() {
     return this.olympics$.asObservable();
+  }
+
+  getHasError() {
+    return this.hasError$.asObservable();
   }
 }

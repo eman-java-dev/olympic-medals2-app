@@ -1,0 +1,128 @@
+h2 {
+    text-align: center;
+    color: #003366;
+    margin-top: 20px;
+}
+
+hr {
+    margin: 10px auto;
+    width: 80%;
+    border: 1px solid #ccc;
+}
+
+p {
+    text-align: center;
+    font-weight: 500;
+    color: #555;
+}
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px auto;
+    gap: 40px;
+}
+
+ngx-charts-pie-chart,
+ngx-charts-bar-vertical {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.country-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.country-list li {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 10px 15px;
+    transition: 0.3s ease;
+}
+ .country-list li:hover {
+    background-color: #ddeeff;
+    transform: scale(1.05);
+
+
+.country-list a {
+    text-decoration: none;
+    color: #003366;
+    font-weight: 600;
+ }
+
+  .country-list a:hover {
+    text-decoration: underline;
+}
+.home-container {
+max-width: 1000px;
+margin: auto;
+padding: 2rem;
+background-color: #f4f6fa;
+border-radius: 10px;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1995ad;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+text-align: center;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.chart-container {
+  margin-bottom: 2rem;
+}
+
+.country-list {
+list-style: none;
+padding: 0;
+text-align: center;
+}
+
+.country-link {
+  display: inline-block;
+  margin: 0.3rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #1995ad;
+  border-radius: 5px;
+  color: #1995ad;
+  text-decoration: none;
+  background-color: #e6f2f5;
+  transition: all 0.3s ease;
+}
+
+.country-link:hover {
+background-color: #1995ad;
+color: white;
+}
+
+.no-data-message {
+text-align: center;
+color: #a10a28;
+font-weight: bold;
+font-size: 16px;
+}
+ }
+ .error-message {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  margin: 1rem 0;
+}

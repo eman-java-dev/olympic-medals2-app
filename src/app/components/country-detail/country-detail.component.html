@@ -1,0 +1,16 @@
+<div class="country-container" *ngIf="countryData; else noData">
+    <h2 class="country-title">{{ countryData.country }}</h2>
+  
+    <ul class="participation-list">
+      <li *ngFor="let p of countryData.participations">
+        🗓️ Year: {{ p.year }} – 🏅 Medals: {{ p.medalsCount }}
+      </li>
+    </ul>
+  
+    <a class="back-button" routerLink="/">⬅️ Back to Home</a>
+  </div>
+  
+  <ng-template #noData>
+    <p class="no-data-message">❌ DATA NOT FOUND FOR THIS COUNTRY</p>
+  </ng-template>
+  
