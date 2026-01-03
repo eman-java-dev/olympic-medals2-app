@@ -1,16 +1,62 @@
-<div class="country-container" *ngIf="countryData; else noData">
-    <h2 class="country-title">{{ countryData.country }}</h2>
-  
-    <ul class="participation-list">
-      <li *ngFor="let p of countryData.participations">
-        🗓️ Year: {{ p.year }} – 🏅 Medals: {{ p.medalsCount }}
-      </li>
-    </ul>
-  
-    <a class="back-button" routerLink="/">⬅️ Back to Home</a>
+<!-- Page container -->
+<div class="detail-page" *ngIf="countryData; else noData">
+
+  <!-- Title bar (like wireframe) -->
+  <div class="country-header">
+    {{ countryData.country }}
   </div>
-  
-  <ng-template #noData>
-    <p class="no-data-message">❌ DATA NOT FOUND FOR THIS COUNTRY</p>
-  </ng-template>
-  
+
+  <!-- KPI cards -->
+  <div class="kpi-row">
+    <div class="kpi-card">
+      <div class="kpi-label">Number of entries</div>
+      <div class="kpi-value">{{ totalEntries }}</div>
+    </div>
+
+    <div class="kpi-card">
+      <div class="kpi-label">Total number medals</div>
+      <div class="kpi-value">{{ totalMedals }}</div>
+    </div>
+
+    <div class="kpi-card">
+      <div class="kpi-label">Total number of athletes</div>
+      <div class="kpi-value">{{ totalAthletes }}</div>
+    </div>
+  </div>
+
+  <!-- Chart -->
+  <div class="chart-wrapper">
+    <ngx-charts-line-chart
+      class="detail-chart"
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="lineChartData"
+      [legend]="false"
+      [xAxis]="true"
+      [yAxis]="true"
+      [showGridLines]="true"
+      [autoScale]="true"
+      [roundDomains]="true"
+      [showXAxisLabel]="true"
+      [xAxisLabel]="'Dates'"
+      [showYAxisLabel]="true"
+      [yAxisLabel]="'Medals'">
+    </ngx-charts-line-chart>
+  </div>
+
+  <!-- Back button -->
+  <div class="back-row">
+    <button type="button" class="back-button" (click)="goBack()">
+      Back
+    </button>
+  </div>
+
+</div>
+
+<!-- No data -->
+<ng-template #noData>
+  <div class="no-data">
+    No corresponding page found
+    <button type="button" class="back-button" (click)="goBack()">Go back</button>
+  </div>
+</ng-template>

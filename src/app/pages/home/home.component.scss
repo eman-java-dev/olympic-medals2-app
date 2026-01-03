@@ -1,76 +1,35 @@
+/*  تنسيق العنوان */
 h2 {
-    text-align: center;
-    color: #003366;
-    margin-top: 20px;
+  text-align: center;
+  color: #003366;
+  margin-top: 20px;
 }
 
+/*  خط فاصل */
 hr {
-    margin: 10px auto;
-    width: 80%;
-    border: 1px solid #ccc;
+  margin: 10px auto;
+  width: 80%;
+  border: 1px solid #ccc;
 }
 
+/* تنسيق الفقرة */
 p {
-    text-align: center;
-    font-weight: 500;
-    color: #555;
-}
-.chart-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 30px auto;
-    gap: 40px;
+  text-align: center;
+  font-weight: 500;
+  color: #555;
 }
 
-ngx-charts-pie-chart,
-ngx-charts-bar-vertical {
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
-    border-radius: 12px;
-    padding: 20px;
-    background-color: #f9f9f9;
-}
-
-.country-list {
-    list-style: none;
-    padding: 0;
-    margin: 20px auto;
-    width: fit-content;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-}
-
-.country-list li {
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    padding: 10px 15px;
-    transition: 0.3s ease;
-}
- .country-list li:hover {
-    background-color: #ddeeff;
-    transform: scale(1.05);
-
-
-.country-list a {
-    text-decoration: none;
-    color: #003366;
-    font-weight: 600;
- }
-
-  .country-list a:hover {
-    text-decoration: underline;
-}
+/*  حاوية عامة */
 .home-container {
-max-width: 1000px;
-margin: auto;
-padding: 2rem;
-background-color: #f4f6fa;
-border-radius: 10px;
-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+  background-color: #f4f6fa;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
 }
 
+/*  عنوان كبير */
 .title {
   font-size: 2rem;
   font-weight: bold;
@@ -79,50 +38,92 @@ box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
   margin-bottom: 1rem;
 }
 
+/*  العنوان الفرعي */
 .subtitle {
-text-align: center;
+  text-align: center;
   font-size: 1rem;
   margin-bottom: 2rem;
   color: #555;
 }
 
+/*  رسالة الخطأ */
+.error-message {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+/*  الرسالة عند عدم وجود بيانات */
+.no-data-message {
+  text-align: center;
+  color: #a10a28;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/*  حاوية الرسوم البيانية */
 .chart-container {
-  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px auto;
+  gap: 40px;
 }
 
+/*  تزيين الرسوم */
+ngx-charts-pie-chart,
+ngx-charts-bar-vertical {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+/*  قائمة الدول */
 .country-list {
-list-style: none;
-padding: 0;
-text-align: center;
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  width: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
 }
 
+/*  عنصر من القائمة */
+.country-list li {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 10px 15px;
+  transition: 0.3s ease;
+}
+
+/*  تأثير hover */
+.country-list li:hover {
+  background-color: #ddeeff;
+  transform: scale(1.05);
+}
+
+/* رابط الدولة */
+.country-list a,
 .country-link {
+  text-decoration: none;
+  color: #003366;
+  font-weight: 600;
   display: inline-block;
   margin: 0.3rem;
   padding: 0.5rem 1rem;
   border: 1px solid #1995ad;
   border-radius: 5px;
-  color: #1995ad;
-  text-decoration: none;
   background-color: #e6f2f5;
   transition: all 0.3s ease;
 }
 
+/*  تأثير hover على الرابط */
 .country-link:hover {
-background-color: #1995ad;
-color: white;
-}
-
-.no-data-message {
-text-align: center;
-color: #a10a28;
-font-weight: bold;
-font-size: 16px;
-}
- }
- .error-message {
-  color: red;
-  font-weight: bold;
-  text-align: center;
-  margin: 1rem 0;
+  background-color: #1995ad;
+  color: white;
+  text-decoration: none;
 }

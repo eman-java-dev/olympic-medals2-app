@@ -1,57 +1,69 @@
 <div class="home-container">
-  <h2 class="title">🏆 Olympic Games App</h2>
-  <hr />
+  <!-- عنوان التطبيق -->
+  <h1 class="main-title">🏅 Olympic Games App</h1>
   <p class="subtitle">{{ chartData.length }} countries loaded</p>
 
-  <!-- رسالة الخطأ إذا فشل تحميل البيانات -->
-  <p class="error-message" *ngIf="hasError">
+  <!-- رسالة الخطأ -->
+  <div *ngIf="hasError" class="error-message">
     ⚠️ Une erreur est survenue lors du chargement des données olympiques.
-  </p>
-
-  <div class="chart-container" *ngIf="chartData.length > 0 && !hasError; else noData">
-    <!-- Pie Chart -->
-    <ngx-charts-pie-chart
-      [view]="view"
-      [scheme]="colorScheme"
-      [results]="chartData"
-      [legend]="showLegend"
-      [labels]="showLabels"
-      [doughnut]="isDoughnut">
-    </ngx-charts-pie-chart>
-
-    <!-- Bar Chart -->
-    <ngx-charts-bar-vertical
-      [view]="view"
-      [scheme]="colorScheme"
-      [results]="barChartData"
-      [legend]="showLegend"
-      [xAxis]="true"
-      [yAxis]="true"
-      [showXAxisLabel]="true"
-      [showYAxisLabel]="true"
-      [xAxisLabel]="'Country'"
-      [yAxisLabel]="'Total Medals'"
-      (select)="onSelect($event)">
-    </ngx-charts-bar-vertical>
-
-    <!-- قائمة الدول مع الأعلام -->
-    <ul class="country-list">
-      <li *ngFor="let o of olympics">
-        <a class="country-link" [routerLink]="['/country', o.id]">
-          <img 
-            [src]="'https://flagcdn.com/24x18/' + getCountryCode(o.country) + '.png'" 
-            [alt]="o.country + ' flag'"
-            width="24"
-            height="18"
-            style="margin-right: 8px;"
-          />
-          {{ o.country }}
-        </a>
-      </li>
-    </ul>
   </div>
 
+  <!-- محتوى الصفحة الرئيسي -->
+  <div *ngIf="!hasError && chartData.length > 0; else noData" class="main-content">
+    
+    <!-- الرسم البياني الدائري -->
+    <section class="chart-section">
+      <h2 class="chart-title">Medals Distribution (Pie Chart)</h2>
+      <ngx-charts-pie-chart
+        [view]="view"
+        [scheme]="colorScheme"
+        [results]="chartData"
+        [legend]="showLegend"
+        [labels]="showLabels"
+        [doughnut]="isDoughnut">
+      </ngx-charts-pie-chart>
+    </section>
+
+    <!-- الرسم البياني العمودي -->
+    <section class="chart-section">
+      <h2 class="chart-title">Total Medals by Country (Bar Chart)</h2>
+      <ngx-charts-bar-vertical
+        [view]="view"
+        [scheme]="colorScheme"
+        [results]="barChartData"
+        [legend]="showLegend"
+        [xAxis]="true"
+        [yAxis]="true"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        [xAxisLabel]="'Country'"
+        [yAxisLabel]="'Total Medals'"
+        (select)="onSelect($event)">
+      </ngx-charts-bar-vertical>
+    </section>
+
+    <!-- قائمة الدول -->
+    <section class="country-list-section">
+      <h2 class="chart-title">List of Countries</h2>
+      <ul class="country-list">
+        <li *ngFor="let o of olympics" class="country-item">
+          <a [routerLink]="['/country', o.id]" class="country-link">
+            <img
+              [src]="'https://flagcdn.com/24x18/' + getCountryCode(o.country) + '.png'"
+              [alt]="o.country + ' flag'"
+              width="24"
+              height="18"
+              class="country-flag"
+            />
+            <span class="country-name">{{ o.country }}</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- في حال لم تكن هناك بيانات -->
   <ng-template #noData>
-    <p class="no-data-message">❌ Data is currently unavailable</p>
+    <p class="no-data-message">❌ No Olympic data available at the moment.</p>
   </ng-template>
 </div>
