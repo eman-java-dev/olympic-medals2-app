@@ -1,129 +1,54 @@
-/*  تنسيق العنوان */
-h2 {
-  text-align: center;
-  color: #003366;
-  margin-top: 20px;
-}
-
-/*  خط فاصل */
-hr {
-  margin: 10px auto;
-  width: 80%;
-  border: 1px solid #ccc;
-}
-
-/* تنسيق الفقرة */
-p {
-  text-align: center;
-  font-weight: 500;
-  color: #555;
-}
-
-/*  حاوية عامة */
 .home-container {
-  max-width: 1000px;
+  max-width: 900px;
   margin: auto;
   padding: 2rem;
-  background-color: #f4f6fa;
-  border-radius: 10px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-/*  عنوان كبير */
-.title {
+.main-title {
   font-size: 2rem;
-  font-weight: bold;
-  color: #1995ad;
-  text-align: center;
-  margin-bottom: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
 }
 
-/*  العنوان الفرعي */
 .subtitle {
-  text-align: center;
-  font-size: 1rem;
-  margin-bottom: 2rem;
   color: #555;
+  margin-bottom: 2rem;
 }
 
-/*  رسالة الخطأ */
-.error-message {
-  color: red;
-  font-weight: bold;
-  text-align: center;
-  margin: 1rem 0;
-}
-
-/*  الرسالة عند عدم وجود بيانات */
-.no-data-message {
-  text-align: center;
-  color: #a10a28;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-/*  حاوية الرسوم البيانية */
-.chart-container {
+.chart-section {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 30px auto;
-  gap: 40px;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 
-/*  تزيين الرسوم */
-ngx-charts-pie-chart,
-ngx-charts-bar-vertical {
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
-  border-radius: 12px;
-  padding: 20px;
-  background-color: #f9f9f9;
-}
-
-/*  قائمة الدول */
 .country-list {
   list-style: none;
   padding: 0;
-  margin: 20px auto;
-  width: fit-content;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 12px;
+  gap: 1rem;
 }
 
-/*  عنصر من القائمة */
-.country-list li {
-  background-color: #f0f0f0;
-  border-radius: 8px;
-  padding: 10px 15px;
-  transition: 0.3s ease;
-}
-
-/*  تأثير hover */
-.country-list li:hover {
-  background-color: #ddeeff;
-  transform: scale(1.05);
-}
-
-/* رابط الدولة */
-.country-list a,
 .country-link {
   text-decoration: none;
   color: #003366;
-  font-weight: 600;
-  display: inline-block;
-  margin: 0.3rem;
+  border: 1px solid #003366;
   padding: 0.5rem 1rem;
-  border: 1px solid #1995ad;
-  border-radius: 5px;
-  background-color: #e6f2f5;
-  transition: all 0.3s ease;
+  border-radius: 4px;
 }
 
-/*  تأثير hover على الرابط */
 .country-link:hover {
-  background-color: #1995ad;
+  background-color: #003366;
   color: white;
-  text-decoration: none;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+}
+
+.no-data-message {
+  color: #888;
 }

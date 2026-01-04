@@ -1,12 +1,7 @@
-<!-- Page container -->
 <div class="detail-page" *ngIf="countryData; else noData">
 
-  <!-- Title bar (like wireframe) -->
-  <div class="country-header">
-    {{ countryData.country }}
-  </div>
+  <h2 class="country-header">{{ countryData.country }}</h2>
 
-  <!-- KPI cards -->
   <div class="kpi-row">
     <div class="kpi-card">
       <div class="kpi-label">Number of entries</div>
@@ -14,7 +9,7 @@
     </div>
 
     <div class="kpi-card">
-      <div class="kpi-label">Total number medals</div>
+      <div class="kpi-label">Total number of medals</div>
       <div class="kpi-value">{{ totalMedals }}</div>
     </div>
 
@@ -24,19 +19,14 @@
     </div>
   </div>
 
-  <!-- Chart -->
   <div class="chart-wrapper">
     <ngx-charts-line-chart
-      class="detail-chart"
       [view]="view"
       [scheme]="colorScheme"
       [results]="lineChartData"
       [legend]="false"
       [xAxis]="true"
       [yAxis]="true"
-      [showGridLines]="true"
-      [autoScale]="true"
-      [roundDomains]="true"
       [showXAxisLabel]="true"
       [xAxisLabel]="'Dates'"
       [showYAxisLabel]="true"
@@ -44,19 +34,10 @@
     </ngx-charts-line-chart>
   </div>
 
-  <!-- Back button -->
-  <div class="back-row">
-    <button type="button" class="back-button" (click)="goBack()">
-      Back
-    </button>
-  </div>
+  <button class="back-button" (click)="goBack()">Back</button>
 
 </div>
 
-<!-- No data -->
 <ng-template #noData>
-  <div class="no-data">
-    No corresponding page found
-    <button type="button" class="back-button" (click)="goBack()">Go back</button>
-  </div>
+  <p>No data available.</p>
 </ng-template>
