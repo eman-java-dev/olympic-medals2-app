@@ -1,19 +1,19 @@
 <div class="home-container">
 
-  <!-- Title -->
+  <!-- عنوان الصفحة -->
   <h1 class="main-title">Olympic Games</h1>
   <p class="subtitle">{{ olympics.length }} countries</p>
 
-  <!-- Error message -->
+  <!-- رسالة خطأ -->
   <div *ngIf="hasError" class="error-message">
     Une erreur est survenue lors du chargement des données.
   </div>
 
-  <!-- Main content -->
+  <!-- محتوى الصفحة -->
   <div *ngIf="!hasError && olympics.length > 0; else noData">
 
-    <!-- Pie chart only (as in mockup) -->
-    <section class="chart-section">
+    <!-- Pie chart فقط (كما في الماكيت) -->
+    <section class="chart-card">
       <ngx-charts-pie-chart
         [view]="view"
         [scheme]="colorScheme"
@@ -24,7 +24,7 @@
       </ngx-charts-pie-chart>
     </section>
 
-    <!-- Countries list -->
+    <!-- أزرار الدول -->
     <section class="country-list-section">
       <ul class="country-list">
         <li *ngFor="let o of olympics">
@@ -37,7 +37,7 @@
 
   </div>
 
-  <!-- No data -->
+  <!-- في حالة لا توجد بيانات -->
   <ng-template #noData>
     <p class="no-data-message">No data available.</p>
   </ng-template>

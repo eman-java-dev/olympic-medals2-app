@@ -1,6 +1,8 @@
-/* 
-   خلفية الصفحة مثل الماكيت
- */
+/* ================================
+   Country Detail - مطابق للماكيت
+   ================================ */
+
+/* خلفية الصفحة مثل الماكيت */
 :host {
   display: block;
   min-height: 100%;
@@ -8,16 +10,13 @@
   background: #f6f7f8;
 }
 
-/* 
-   الحاوية الرئيسية في المنتصف
+/* الحاوية الرئيسية في المنتصف */
 .detail-page {
   max-width: 980px;
   margin: 0 auto;
 }
 
-/* 
-   عنوان الدولة
- */
+/* عنوان الدولة (شريط) */
 .country-header {
   width: fit-content;
   margin: 0 auto 18px auto;
@@ -25,20 +24,19 @@
   background: #1aa6a8;
   color: #ffffff;
   font-size: 34px;
-  font-weight: 700;
+  font-weight: 800;
   border-radius: 10px;
   text-align: center;
 }
 
-/* =
-   صف كروت الإحصائيات
- */
+/* صف كروت الإحصائيات */
 .kpi-row {
   display: flex;
   gap: 18px;
   justify-content: center;
+  align-items: stretch;
   flex-wrap: wrap;
-  margin-bottom: 18px;
+  margin: 0 auto 16px auto;
 }
 
 /* كرت إحصائي */
@@ -47,68 +45,78 @@
   background: #ffffff;
   border: 2px solid #1aa6a8;
   border-radius: 10px;
-  padding: 14px;
+  padding: 14px 16px;
   text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
 }
 
 .kpi-label {
   color: #5f6b6c;
-  font-weight: 600;
-  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
 .kpi-value {
+  color: #111;
   font-size: 28px;
-  font-weight: 800;
+  font-weight: 900;
 }
 
-/* 
-   إطار الرسم البياني
- */
+/* كرت الرسم البياني: مهم يكون محدود ومتمركز */
 .chart-wrapper {
+  max-width: 980px;
+  margin: 16px auto 0 auto;
   background: #ffffff;
   border-radius: 14px;
-  padding: 14px;
+  padding: 16px;
   box-shadow: 0 2px 14px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
 }
 
-/* 
-   صف زر الرجوع (التوسيط)
- */
+/* نخلي الرسم ياخذ عرض الحاوية */
+.detail-chart {
+  display: block;
+  width: 100%;
+}
+
+/* صف زر الرجوع: هذا اللي يخليه في المنتصف */
 .back-row {
   display: flex;
-  justify-content: center; /* ✔ التوسيط الأفقي */
-  margin-top: 20px;
+  justify-content: center;
+  margin-top: 16px;
 }
 
-/* 
-   زر الرجوع
- */
+/* زر الرجوع (عرض طبيعي مش عريض) */
 .back-button {
   background: #ffffff;
   border: 2px solid #1aa6a8;
   color: #1aa6a8;
-  font-weight: 700;
-  padding: 10px 28px;
+  font-weight: 800;
+  padding: 10px 22px;
   border-radius: 8px;
   cursor: pointer;
-  width: auto; 
+  width: auto;
+  min-width: 120px;
 }
 
-/* تأثير hover */
 .back-button:hover {
   background: #1aa6a8;
   color: #ffffff;
 }
 
-/* 
-   في حال عدم وجود بيانات
-*/
+/* بلوك عدم وجود بيانات */
 .no-data {
   max-width: 980px;
   margin: 0 auto;
-  padding: 40px;
+  padding: 44px 16px;
   text-align: center;
+  color: #1aa6a8;
+  font-weight: 800;
   background: #ffffff;
   border-radius: 14px;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.06);
+  display: grid;
+  gap: 14px;
+  justify-items: center;
 }

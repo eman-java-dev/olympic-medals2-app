@@ -45,22 +45,44 @@ This project was built as part of a learning journey with Studi.
 
 ---
 
-##  Folder Structure Overview
+## 📁 Project Structure
 
-```
+```text
 src/
-├── app/
-│   ├── core/
-│   │   ├── models/          # Olympic model (interface)
-│   │   └── services/        # OlympicService for fetching data
-│   ├── pages/
-│   │   ├── home/            
-│   │   └── not-found/       # 404 page (optional)
-│   └── components/
-│       └── country-detail/  # Detail view for a selected country
-├── assets/
-│   └── mock/
-│       └── olympic.json     # Mock data file
+ └── app/
+     ├── components/
+     │   └── country-detail/
+     │       ├── country-detail.component.html
+     │       ├── country-detail.component.scss
+     │       └── country-detail.component.ts
+     │
+     ├── core/
+     │   ├── models/
+     │   │   ├── Olympic.ts
+     │   │   └── Participation.ts
+     │   └── services/
+     │       └── olympic.service.ts
+     │
+     ├── pages/
+     │   ├── home/
+     │   │   ├── home.component.html
+     │   │   ├── home.component.scss
+     │   │   └── home.component.ts
+     │   │
+     │   └── not-found/
+     │       ├── not-found.component.html
+     │       ├── not-found.component.scss
+     │       └── not-found.component.ts
+     │
+     ├── app-routing.module.ts
+     ├── app.component.ts
+     └── app.module.ts
+     │
+ └── assets/
+     ├── mock/
+     │   └── olympic.json
+     └── screenshots/
+
 ```
 
 ---
@@ -86,14 +108,36 @@ src/
 ---
 ## Screenshots
 
-### 🏠 Home Page
-![Home Page](src/assets/screenshots/home-page.png)
-![Home Page](src/assets/screenshots/home-page1.png)
+## 📸 Application Screenshots
 
-### 📄 Country Detail Page
-![Country Detail](src/assets/screenshots/country-detail-page1.png)
-![Country Detail](src/assets/screenshots/country-detail-page2.png)
-![Country Detail](src/assets/screenshots/country-detail-page3.png)
+### 🏠 Home Page
+![Home Page](src/assets/screenshots/home.png)
+
+---
+
+### 🇮🇹 Country Detail – Italy
+![Italy](src/assets/screenshots/italy.png)
+
+---
+
+### 🇪🇸 Country Detail – Spain
+![Spain](src/assets/screenshots/spain.png)
+
+---
+
+### 🇩🇪 Country Detail – Germany
+![Germany](src/assets/screenshots/germani.png)
+
+---
+
+### 🇫🇷 Country Detail – France
+![France](src/assets/screenshots/franch.png)
+
+---
+
+### 🇺🇸 Country Detail – United States
+![United States](src/assets/screenshots/united.png)
+
 
 
 ### ❌ Error Message Example

@@ -1,7 +1,9 @@
 <div class="detail-page" *ngIf="countryData; else noData">
 
-  <h2 class="country-header">{{ countryData.country }}</h2>
+  <!-- عنوان الدولة -->
+  <div class="country-header">{{ countryData.country }}</div>
 
+  <!-- كروت الإحصائيات -->
   <div class="kpi-row">
     <div class="kpi-card">
       <div class="kpi-label">Number of entries</div>
@@ -19,14 +21,19 @@
     </div>
   </div>
 
+  <!-- الرسم البياني داخل container -->
   <div class="chart-wrapper">
     <ngx-charts-line-chart
+      class="detail-chart"
       [view]="view"
       [scheme]="colorScheme"
       [results]="lineChartData"
       [legend]="false"
       [xAxis]="true"
       [yAxis]="true"
+      [showGridLines]="true"
+      [autoScale]="true"
+      [roundDomains]="true"
       [showXAxisLabel]="true"
       [xAxisLabel]="'Dates'"
       [showYAxisLabel]="true"
@@ -34,10 +41,16 @@
     </ngx-charts-line-chart>
   </div>
 
-  <button class="back-button" (click)="goBack()">Back</button>
+  <!-- زر الرجوع في المنتصف -->
+  <div class="back-row">
+    <button class="back-button" (click)="goBack()">Back</button>
+  </div>
 
 </div>
 
 <ng-template #noData>
-  <p>No data available.</p>
+  <div class="no-data">
+    No data available.
+    <button class="back-button" (click)="goBack()">Go back</button>
+  </div>
 </ng-template>
