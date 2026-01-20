@@ -130,6 +130,9 @@ The layout and charts adapt to different screen sizes.
 - Charts powered by [ngx-charts](https://swimlane.github.io/ngx-charts/)
 
 ---
+## 📁 Project Structure
+
+```text
 src/
 └── app/
     ├── components/
@@ -167,6 +170,7 @@ src/
     ├── mock/
     │   └── olympic.json
     └── screenshots/
+
 
 ---
 This project helped me strengthen my understanding of Angular fundamentals, observables and subscriptions management, application architecture, data visualization with charts, and responsive design. It represents an important step in my learning journey and practical experience with Angular best practices .
