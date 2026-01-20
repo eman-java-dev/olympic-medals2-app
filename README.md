@@ -55,86 +55,6 @@ During this project, I learned and practiced:
 - Improving code readability and maintainability
 
 
----
-## 📁 Project Structure
-src/
-└── app/
-    ├── components/
-    │   └── country-detail/
-    │       ├── country-detail.component.html
-    │       ├── country-detail.component.scss
-    │       └── country-detail.component.ts
-    │
-    ├── core/
-    │   ├── models/
-    │   │   ├── Olympic.ts
-    │   │   └── Participation.ts
-    │   │
-    │   ├── charts.ts
-    │   └── services/
-    │       └── olympic.service.ts
-    │
-    ├── pages/
-    │   └── home/
-    │       ├── home.component.html
-    │       ├── home.component.scss
-    │       ├── home.component.ts
-    │       └── home.component.spec.ts
-    │
-    ├── not-found/
-    │   ├── not-found.component.html
-    │   ├── not-found.component.scss
-    │   └── not-found.component.ts
-    │
-    ├── app-routing.module.ts
-    ├── app.component.ts
-    └── app.module.ts
-    │
-└── assets/
-    └── mock/
-        └── olympic.json
-
-screenshots/
-
----
----
-
-##  Data Source
-
-The application uses a local JSON file as a mock data source located at:
-src/assets/mock/olympic.json
-
-This file simulates data that would normally come from a backend API in a real-world application.
-
----
-
-##  Responsive Design
-
-The application has been tested using browser DevTools in responsive mode. It works on:
-- Desktop screens
-- Tablet screens
-- Mobile screens (for example iPhone 11 or iPhone 12)
-
-The layout and charts adapt to different screen sizes.
-
----
-
-##  Sources & Credits
-
-- Mock data adapted from the OpenClassrooms platform  
-- Flag icons provided by [flagcdn.com](https://flagcdn.com)  
-- Built with  using [Angular](https://angular.io)
-- Charts powered by [ngx-charts](https://swimlane.github.io/ngx-charts/)
-
----
-
-##  Project Status
-
-All required features have been implemented.
-Charts display correct data.
-Dynamic routing is functional.
-Error handling is implemented.
-The codebase is clean, organized, and ready for evaluation.
 
 ---
 ## 📸 Application Screenshots
@@ -172,6 +92,86 @@ The codebase is clean, organized, and ready for evaluation.
 ### ❌ Error Message Example
 ![Error Message](src/assets/screenshots/error-message.png)
 
+
+##  Data Source
+
+The application uses a local JSON file as a mock data source located at:
+src/assets/mock/olympic.json
+
+This file simulates data that would normally come from a backend API in a real-world application.
+
 ---
+
+##  Responsive Design
+
+The application has been tested using browser DevTools in responsive mode. It works on:
+- Desktop screens
+- Tablet screens
+- Mobile screens (for example iPhone 11 or iPhone 12)
+
+The layout and charts adapt to different screen sizes.
+
+---
+
+##  Sources & Credits
+
+- Mock data adapted from the OpenClassrooms platform  
+- Flag icons provided by [flagcdn.com](https://flagcdn.com)  
+- Built with  using [Angular](https://angular.io)
+- Charts powered by [ngx-charts](https://swimlane.github.io/ngx-charts/)
+
+---
+
+##  Project Status
+
+All required features have been implemented.
+Charts display correct data.
+Dynamic routing is functional.
+Error handling is implemented.
+The codebase is clean, organized, and ready for evaluation.
+---
+
+## 📁 Project Structure
+
+
+Le code est organisé de manière claire pour séparer la logique métier, l'affichage et la navigation :
+
+```text
+src/
+ └── app/
+     ├── components/
+     │   └── country-detail/
+     │       ├── country-detail.component.html
+     │       ├── country-detail.component.scss
+     │       └── country-detail.component.ts
+     │
+     ├── core/
+     │   ├── models/
+     │   │   ├── Olympic.ts
+     │   │   └── Participation.ts
+     │   └── services/
+     │       └── olympic.service.ts
+     │
+     ├── pages/
+     │   ├── home/
+     │   │   ├── home.component.html
+     │   │   ├── home.component.scss
+     │   │   └── home.component.ts
+     │   │
+     │   └── not-found/
+     │       ├── not-found.component.html
+     │       ├── not-found.component.scss
+     │       └── not-found.component.ts
+     │
+     ├── app-routing.module.ts
+     ├── app.component.ts
+     └── app.module.ts
+     │
+ └── assets/
+     ├── mock/
+     │   └── olympic.json
+     └── screenshots/
+
+     
 
 > This project helped me strengthen my understanding of Angular fundamentals, data visualization, and application structure. It represents an important step in my learning journey.
