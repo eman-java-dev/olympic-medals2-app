@@ -173,8 +173,8 @@ src/
      │   └── olympic.json
      └── screenshots/
 
-     
+
 ---
 
+This project helped me strengthen my understanding of Angular fundamentals, data visualization, and application architecture, and represents an important step in my learning journey.
 
-> This project helped me strengthen my understanding of Angular fundamentals, data visualization, and application structure. It represents an important step in my learning journey.
