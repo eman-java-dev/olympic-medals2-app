@@ -57,6 +57,15 @@ During this project, I learned and practiced:
 
 
 ---
+##  Project Status
+
+All required features have been implemented.
+Charts display correct data.
+Dynamic routing is functional.
+Error handling is implemented.
+The codebase is clean, organized, and ready for evaluation.
+---
+
 ## 📸 Application Screenshots
 
 ### 🏠 Home Page
@@ -122,15 +131,6 @@ The layout and charts adapt to different screen sizes.
 
 ---
 
-##  Project Status
-
-All required features have been implemented.
-Charts display correct data.
-Dynamic routing is functional.
-Error handling is implemented.
-The codebase is clean, organized, and ready for evaluation.
----
-
 ## 📁 Project Structure
 
 
@@ -173,5 +173,6 @@ src/
      └── screenshots/
 
      
+---
 
 > This project helped me strengthen my understanding of Angular fundamentals, data visualization, and application structure. It represents an important step in my learning journey.
