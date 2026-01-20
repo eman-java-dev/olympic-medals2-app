@@ -63,38 +63,40 @@ src/
     │   └── country-detail/
     │       ├── country-detail.component.html
     │       ├── country-detail.component.scss
-    │       ├── country-detail.component.ts
-    │       └── country-detail.component.spec.ts
+    │       └── country-detail.component.ts
     │
     ├── core/
     │   ├── models/
     │   │   ├── Olympic.ts
-    │   │   ├── Participation.ts
-    │   │   └── charts.ts
+    │   │   └── Participation.ts
+    │   │
+    │   ├── charts.ts
     │   └── services/
     │       └── olympic.service.ts
     │
     ├── pages/
-    │   ├── home/
-    │   │   ├── home.component.html
-    │   │   ├── home.component.scss
-    │   │   ├── home.component.ts
-    │   │   └── home.component.spec.ts
-    │   │
-    │   └── not-found/
-    │       ├── not-found.component.html
-    │       ├── not-found.component.scss
-    │       └── not-found.component.ts
+    │   └── home/
+    │       ├── home.component.html
+    │       ├── home.component.scss
+    │       ├── home.component.ts
+    │       └── home.component.spec.ts
+    │
+    ├── not-found/
+    │   ├── not-found.component.html
+    │   ├── not-found.component.scss
+    │   └── not-found.component.ts
     │
     ├── app-routing.module.ts
     ├── app.component.ts
     └── app.module.ts
-│
+    │
 └── assets/
-    ├── mock/
-    │   └── olympic.json
-    └── screenshots/
+    └── mock/
+        └── olympic.json
 
+screenshots/
+
+---
 ---
 
 ##  Data Source
