@@ -130,51 +130,43 @@ The layout and charts adapt to different screen sizes.
 - Charts powered by [ngx-charts](https://swimlane.github.io/ngx-charts/)
 
 ---
- 
-
-## 📁 Project Structure
-
-
-Le code est organisé de manière claire pour séparer la logique métier, l'affichage et la navigation :
-
-```text
 src/
- └── app/
-     ├── components/
-     │   └── country-detail/
-     │       ├── country-detail.component.html
-     │       ├── country-detail.component.scss
-     │       └── country-detail.component.ts
-     │
-     ├── core/
-     │   ├── models/
-     │   │   ├── Olympic.ts
-     │   │   └── Participation.ts
-     │   └── services/
-     │       └── olympic.service.ts
-     │
-     ├── pages/
-     │   ├── home/
-     │   │   ├── home.component.html
-     │   │   ├── home.component.scss
-     │   │   └── home.component.ts
-     │   │
-     │   └── not-found/
-     │       ├── not-found.component.html
-     │       ├── not-found.component.scss
-     │       └── not-found.component.ts
-     │
-     ├── app-routing.module.ts
-     ├── app.component.ts
-     └── app.module.ts
-     │
- └── assets/
-     ├── mock/
-     │   └── olympic.json
-     └── screenshots/
-
+└── app/
+    ├── components/
+    │   └── country-detail/
+    │       ├── country-detail.component.html
+    │       ├── country-detail.component.scss
+    │       ├── country-detail.component.ts
+    │       └── country-detail.component.spec.ts
+    │
+    ├── core/
+    │   ├── models/
+    │   │   ├── Olympic.ts
+    │   │   ├── Participation.ts
+    │   │   └── charts.ts
+    │   └── services/
+    │       └── olympic.service.ts
+    │
+    ├── pages/
+    │   ├── home/
+    │   │   ├── home.component.html
+    │   │   ├── home.component.scss
+    │   │   ├── home.component.ts
+    │   │   └── home.component.spec.ts
+    │   │
+    │   └── not-found/
+    │       ├── not-found.component.html
+    │       ├── not-found.component.scss
+    │       └── not-found.component.ts
+    │
+    ├── app-routing.module.ts
+    ├── app.component.ts
+    └── app.module.ts
+│
+└── assets/
+    ├── mock/
+    │   └── olympic.json
+    └── screenshots/
 
 ---
-
-This project helped me strengthen my understanding of Angular fundamentals, data visualization, and application architecture, and represents an important step in my learning journey.
-
+This project helped me strengthen my understanding of Angular fundamentals, observables and subscriptions management, application architecture, data visualization with charts, and responsive design. It represents an important step in my learning journey and practical experience with Angular best practices .
