@@ -1,4 +1,4 @@
-# 🏅 Olympic Medals Dashboard
+#  Olympic Medals Dashboard
  An interactive Angular web application that visualizes Olympic Games data using charts. This project was developed as part of the  OpenClassrooms learning path.
 
 The goal of this application is to display Olympic medal statistics by country in a clear and visual way, using Angular best practices, routing, services, and chart libraries.
@@ -41,7 +41,7 @@ The main objectives of this project are:
 
 ---
 
-## 🧠 What I Learned
+##  What I Learned
 
 During this project, I learned and practiced:
 - Using Angular services with HttpClient
@@ -56,44 +56,50 @@ During this project, I learned and practiced:
 
 
 ---
+## 📁 Project Structure
+
+```text
 src/
- └── app/
-     ├── components/
-     │   └── country-detail/
-     │       ├── country-detail.component.html
-     │       ├── country-detail.component.scss
-     │       └── country-detail.component.ts
-     │
-     ├── core/
-     │   ├── models/
-     │   │   ├── Olympic.ts
-     │   │   ├── Participation.ts
-     │   │   └── charts.ts
-     │   └── services/
-     │       └── olympic.service.ts
-     │
-     ├── pages/
-     │   ├── home/
-     │   │   ├── home.component.html
-     │   │   ├── home.component.scss
-     │   │   ├── home.component.ts
-     │   │   └── home.component.spec.ts
-     │   └── not-found/
-     │       ├── not-found.component.html
-     │       ├── not-found.component.scss
-     │       └── not-found.component.ts
-     │
-     ├── app-routing.module.ts
-     ├── app.component.ts
-     └── app.module.ts
- └── assets/
-     ├── mock/
-     │   └── olympic.json
-     └── screenshots/
+└── app/
+    ├── components/
+    │   └── country-detail/
+    │       ├── country-detail.component.html
+    │       ├── country-detail.component.scss
+    │       ├── country-detail.component.ts
+    │       └── country-detail.component.spec.ts
+    │
+    ├── core/
+    │   ├── models/
+    │   │   ├── Olympic.ts
+    │   │   ├── Participation.ts
+    │   │   └── charts.ts
+    │   └── services/
+    │       └── olympic.service.ts
+    │
+    ├── pages/
+    │   ├── home/
+    │   │   ├── home.component.html
+    │   │   ├── home.component.scss
+    │   │   ├── home.component.ts
+    │   │   └── home.component.spec.ts
+    │   │
+    │   └── not-found/
+    │       ├── not-found.component.html
+    │       ├── not-found.component.scss
+    │       └── not-found.component.ts
+    │
+    ├── app-routing.module.ts
+    ├── app.component.ts
+    └── app.module.ts
+│
+└── assets/
+    ├── mock/
+    │   └── olympic.json
+    └── screenshots/
 
 
 ---
-## 📦 Data Source
+##  Data Source
 
 The application uses a local JSON file as a mock data source located at:
 src/assets/mock/olympic.json
@@ -102,7 +108,7 @@ This file simulates data that would normally come from a backend API in a real-w
 
 ---
 
-## 📱 Responsive Design
+##  Responsive Design
 
 The application has been tested using browser DevTools in responsive mode. It works on:
 - Desktop screens
@@ -135,7 +141,7 @@ The codebase is clean, organized, and ready for evaluation.
 
 ## 📸 Application Screenshots
 
-### 🏠 Home Page
+###  Home Page
 ![Home Page](src/assets/screenshots/home.png)
 
 ---
