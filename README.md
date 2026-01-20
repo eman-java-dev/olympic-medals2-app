@@ -57,8 +57,6 @@ During this project, I learned and practiced:
 
 ---
 ## 📁 Project Structure
-
-```text
 src/
 └── app/
     ├── components/
@@ -97,8 +95,8 @@ src/
     │   └── olympic.json
     └── screenshots/
 
-
 ---
+
 ##  Data Source
 
 The application uses a local JSON file as a mock data source located at:
@@ -137,11 +135,9 @@ Error handling is implemented.
 The codebase is clean, organized, and ready for evaluation.
 
 ---
-## Screenshots
-
 ## 📸 Application Screenshots
 
-###  Home Page
+### 🏠 Home Page
 ![Home Page](src/assets/screenshots/home.png)
 
 ---
@@ -169,11 +165,10 @@ The codebase is clean, organized, and ready for evaluation.
 ### 🇺🇸 Country Detail – United States
 ![United States](src/assets/screenshots/united.png)
 
-
+---
 
 ### ❌ Error Message Example
 ![Error Message](src/assets/screenshots/error-message.png)
-
 
 ---
 
